@@ -1,7 +1,10 @@
 function superbowlWin(array){
-    array.find(function(element){
-        if(element.result === `W`){
-            return element.year
-        }
+  let result = array.find(function(element){
+       return element.result === `W`
     })
+    if(result === undefined){
+        return undefined
+    }else{
+       return result.year
+    }
 }
